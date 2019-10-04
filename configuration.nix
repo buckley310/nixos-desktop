@@ -17,8 +17,11 @@
       (callPackage ./ghidra {})
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
-      (vim_configurable.customize {name="vim";vimrcConfig.customRC="set number relativenumber nowrap ruler scrolloff=9 backspace=start,indent";})
       (writeScriptBin "dropcache" "echo 3 >/proc/sys/vm/drop_caches")
+      (vim_configurable.customize {
+        name="vim";
+        vimrcConfig.customRC="set number relativenumber nowrap ruler scrolloff=9 backspace=start,indent";
+      })
     ];
   };
 
