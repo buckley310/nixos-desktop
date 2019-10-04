@@ -9,12 +9,11 @@
     variables.NIXPKGS_ALLOW_UNFREE = "1";
     gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
     systemPackages = with pkgs; [
-      ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat
+      ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip python3 python2
       firefox chromium vscode steam gimp pavucontrol mpv gnome3.dconf-editor libreoffice tdesktop retroarch
       qemu_kvm virtmanager kubectl doctl
       (callPackage ./gobuster {})
-      (callPackage ./ghidra {})
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "dropcache" "echo 3 >/proc/sys/vm/drop_caches")
