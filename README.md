@@ -1,2 +1,2 @@
 # nixos-desktop
-My NixOS Desktop
+My NixOS Desktop Configuration
