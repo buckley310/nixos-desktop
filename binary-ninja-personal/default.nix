@@ -1,4 +1,4 @@
-{ stdenv, requireFile, libxkbcommon, makeWrapper, jre, unzip, findutils, zlib, glib, fontconfig, freetype, dbus, python27, libglvnd, libXext, libX11, libXrender, libXi, libSM, libICE, xkeyboardconfig }:
+{ stdenv, autoPatchelfHook, requireFile, libxkbcommon, makeWrapper, unzip, zlib, glib, fontconfig, freetype, dbus, python27, libglvnd, libXext, libX11, libXrender, libXi, libSM, libICE, xkeyboardconfig }:
 stdenv.mkDerivation rec {
     name = "binary-ninja-personal";
 
@@ -8,19 +8,10 @@ stdenv.mkDerivation rec {
       sha256 = "5686759920230d64e1fe71d4b2b608dd28c9faba58de5af242b64405186c6be3";
     };
 
-    buildInputs = [ unzip findutils makeWrapper ];
-    libraryPath = stdenv.lib.makeLibraryPath [ libxkbcommon stdenv.cc.cc zlib glib fontconfig freetype dbus python27 libglvnd libXext libX11 libXrender libXi libSM libICE ];
+    nativeBuildInputs = [ autoPatchelfHook libxkbcommon stdenv.cc.cc.lib zlib glib fontconfig freetype dbus python27 libglvnd libXext libX11 libXrender libXi libSM libICE unzip makeWrapper ];
 
     dontStrip = true;
     dontPatchELF = true;
-
-    buildPhase = ''
-        libraryPath="$libraryPath:$out/lib/binary-ninja:$out/lib/binary-ninja/plugins"
-        patchelf --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) --set-rpath "$libraryPath" binaryninja
-        patchelf --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) --set-rpath "$libraryPath" plugins/scc
-        patchelf --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) --set-rpath "$libraryPath" plugins/yasm
-        find . -name '*.so.*' -or -name '*.so' | xargs -n1 patchelf --set-rpath "$libraryPath"
-    '';
 
     installPhase = ''
         mkdir -p $out/lib $out/bin
