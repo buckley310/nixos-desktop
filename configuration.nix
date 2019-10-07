@@ -37,6 +37,7 @@
     retroarch = {
       enableParallelN64 = true;
       enableNestopia = true;
+      enableHiganSFC = true;
     };
   };
 
