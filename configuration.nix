@@ -81,7 +81,6 @@
     #kernelParams = [ "zfs.zfs_arc_max=${toString (1024*1024*1024)}" ];
     loader.timeout = 1;
     cleanTmpDir = true;
-    loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     zfs.forceImportAll = false;
     zfs.forceImportRoot = false;
