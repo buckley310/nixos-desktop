@@ -105,7 +105,7 @@
     sean = {
       isNormalUser = true;
       uid = 1000;
-      extraGroups = [ "wheel" "audio" "video" "networkmanager" "dialout" ];
+      extraGroups = [ "wheel" "audio" "video" "networkmanager" "dialout" "input" ];
     };
     test = {
       isNormalUser = true;
