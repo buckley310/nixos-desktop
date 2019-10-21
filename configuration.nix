@@ -52,7 +52,6 @@
   };
 
   services = {
-    avahi.enable = false;
     udev.extraRules = ''
       KERNEL=="uinput", MODE="0666", OPTIONS+="static_node=uinput"
 
