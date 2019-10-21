@@ -17,6 +17,11 @@
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "dropcache" "echo 3 >/proc/sys/vm/drop_caches")
+      (writeScriptBin "red" ''
+        x="$(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled)"
+        [ "$x" = "true" ] && x=false || x=true
+        gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled $x
+      '')
       (vim_configurable.customize {
         name="vim";
         vimrcConfig.customRC="set number relativenumber nowrap ruler scrolloff=9 backspace=start,indent";
