@@ -52,6 +52,11 @@
   };
 
   services = {
+    avahi = {
+      nssmdns = true;
+      publish.enable = true;
+      publish.addresses = true;
+    };
     udev.extraRules = ''
       KERNEL=="uinput", MODE="0666", OPTIONS+="static_node=uinput"
 
