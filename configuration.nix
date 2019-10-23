@@ -34,6 +34,7 @@
     bash.interactiveShellInit = ''
       stty -ixon
       echo $XDG_SESSION_TYPE
+      alias p=python3
     '';
   };
 
