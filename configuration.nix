@@ -30,7 +30,7 @@
       '')
       (vim_configurable.customize {
         name="vim";
-        vimrcConfig.customRC="set number relativenumber nowrap ruler scrolloff=9 backspace=start,indent";
+        vimrcConfig.customRC="set nowrap ruler scrolloff=9 backspace=start,indent";
       })
     ];
   };
