@@ -108,7 +108,6 @@
   };
 
   hardware = {
-    enableAllFirmware = true;
     cpu.amd.updateMicrocode = true;
     cpu.intel.updateMicrocode = true;
     pulseaudio.enable = true;
