@@ -22,7 +22,7 @@
       (callPackage ./gobuster {})
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
-      (writeScriptBin "dropcache" "echo 3 >/proc/sys/vm/drop_caches")
+      (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
       (writeScriptBin "red" ''
         x="$(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled)"
         [ "$x" = "true" ] && x=false || x=true
