@@ -18,7 +18,8 @@
       ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
-      # Custom
+      # Other
+      gnomeExtensions.dash-to-dock
       (callPackage ./gobuster {})
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
