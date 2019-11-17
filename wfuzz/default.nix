@@ -13,6 +13,5 @@ python3Packages.buildPythonPackage rec {
     meta = with stdenv.lib; {
       homepage = http://www.edge-security.com/wfuzz.php;
       description = "The web application Bruteforcer";
-      license = licenses.gpl;
     };
 }
