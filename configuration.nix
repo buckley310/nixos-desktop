@@ -13,12 +13,13 @@
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 python2
       # Apps
-      firefox chromium vscode steam gimp pavucontrol mpv gnome3.dconf-editor libreoffice tdesktop retroarch
+      chromium vscode steam gimp pavucontrol mpv gnome3.dconf-editor libreoffice tdesktop retroarch
       # Security tools
       ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
       # Other
+      (if builtins.pathExists "/etc/nixos/using_wayland" then firefox-wayland else firefox)
       gnomeExtensions.dash-to-dock
       gnomeExtensions.dash-to-panel
       (callPackage ./gobuster {})
