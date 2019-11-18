@@ -20,6 +20,7 @@
       qemu_kvm virtmanager kubectl doctl
       # Other
       gnomeExtensions.dash-to-dock
+      gnomeExtensions.dash-to-panel
       (callPackage ./gobuster {})
       (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
