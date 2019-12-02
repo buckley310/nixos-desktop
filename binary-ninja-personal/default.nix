@@ -23,8 +23,9 @@ stdenv.mkDerivation rec {
     dontPatchELF = true;
 
     installPhase = ''
-        mkdir -p $out/lib $out/bin
+        mkdir -p $out/lib $out/bin $out/share
         mv $NIX_BUILD_TOP/$sourceRoot $out/lib/binary-ninja
+        ln -s "${src}" "$out/share/BinaryNinja-personal.zip"
         ln -s "${python37}/lib/libpython3.7m.so.1.0" "$out/lib/binary-ninja/libpython3.7m.so.1"
         makeWrapper $out/lib/binary-ninja/binaryninja $out/bin/binaryninja \
             --set QT_XKB_CONFIG_ROOT "${xkeyboardconfig}/share/X11/xkb" \
