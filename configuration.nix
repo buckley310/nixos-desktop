@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  imports = [ /etc/nixos/hardware-configuration.nix /etc/nixos/local.nix ];
+  imports = [ ../hardware-configuration.nix ../local.nix ];
   time.timeZone = "US/Eastern";
   sound.enable = true;
   networking.networkmanager.enable = true;
