@@ -13,7 +13,8 @@
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 python2
       # Apps
-      chromium vscode steam gimp pavucontrol mpv gnome3.dconf-editor libreoffice tdesktop retroarch
+      chromium vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
+      gnome3.gnome-tweaks gnome3.dconf-editor
       # Security tools
       ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       # Virtualisation
