@@ -20,6 +20,7 @@
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
       # Other
+      yaru-theme
       (if builtins.pathExists "/etc/nixos/using_wayland" then firefox-wayland else firefox)
       gnomeExtensions.dash-to-dock
       gnomeExtensions.dash-to-panel
@@ -38,6 +39,8 @@
       })
     ];
   };
+
+  fonts.fonts = [ pkgs.ubuntu_font_family ];
 
   programs = {
     bash.vteIntegration = true;
