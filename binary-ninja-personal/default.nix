@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
     src = requireFile {
       name = "BinaryNinja-personal.zip";
       url = "file:///var/BinaryNinja-personal.zip";
-      sha256 = "2b6a3bb1183c8ea3e63ea17667dabdf00bff04b304b67c71d8616e47e19188b3";
+      sha256 = "59678b1c7c3087be518a8d30fc01264cc53beb9ab9c9a58ce4d8f5939123074c";
     };
 
     nativeBuildInputs = [
