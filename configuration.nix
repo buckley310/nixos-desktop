@@ -17,6 +17,7 @@
       gnome3.gnome-tweaks gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
+      wfuzz gobuster
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
       # Other
@@ -24,8 +25,6 @@
       (if builtins.pathExists "/etc/nixos/using_wayland" then firefox-wayland else firefox)
       gnomeExtensions.dash-to-dock
       gnomeExtensions.dash-to-panel
-      (callPackage ./gobuster {})
-      (callPackage ./wfuzz {})
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
       (writeScriptBin "red" ''
