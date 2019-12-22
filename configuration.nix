@@ -16,7 +16,7 @@
       brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
       gnome3.gnome-tweaks gnome3.dconf-editor
       # Security tools
-      ettercap exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
+      exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
       # Other
