@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   environment = {
     gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
