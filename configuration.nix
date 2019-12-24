@@ -100,7 +100,6 @@
   };
 
   boot = {
-    #kernelParams = [ "zfs.zfs_arc_max=${toString (1024*1024*1024)}" ];
     loader.timeout = 1;
     cleanTmpDir = true;
     zfs.forceImportAll = false;
