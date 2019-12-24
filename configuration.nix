@@ -1,20 +1,24 @@
 { config, pkgs, ... }:
 {
-  imports = [ ../hardware-configuration.nix ../local.nix ];
+  imports = [
+    ../hardware-configuration.nix
+    ../local.nix
+    ./gnome
+  ];
   time.timeZone = "US/Eastern";
   sound.enable = true;
   networking.networkmanager.enable = true;
 
   environment = {
     variables.NIXPKGS_ALLOW_UNFREE = "1";
-    gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
+    #gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
     systemPackages = with pkgs; [
       # CLI tools
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 python2
       # Apps
       brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
-      gnome3.gnome-tweaks gnome3.dconf-editor
+      gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
       wfuzz gobuster
@@ -23,16 +27,8 @@
       # Other
       yaru-theme
       (if builtins.pathExists "/etc/nixos/using_wayland" then firefox-wayland else firefox)
-      gnomeExtensions.dash-to-dock
-      gnomeExtensions.dash-to-panel
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
-      (writeScriptBin "red" ''
-        x="$(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled)"
-        [ "$x" = "true" ] && x=false || x=true
-        echo "Nightlight: $x"
-        gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled $x
-      '')
       (vim_configurable.customize {
         name="vim";
         vimrcConfig.customRC="set nowrap ruler scrolloff=9 backspace=start,indent";
@@ -85,13 +81,6 @@
       # smart card reader
       ATTRS{idVendor}=="04e6", ATTRS{idProduct}=="5116", MODE="0666"
     '';
-    xserver = {
-      enable = true;
-      libinput.enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome3.enable = true;
-      desktopManager.xterm.enable = false;
-    };
   };
 
   zramSwap = {
@@ -104,13 +93,6 @@
     cleanTmpDir = true;
     zfs.forceImportAll = false;
     zfs.forceImportRoot = false;
-  };
-
-  systemd.user.services."telegram" = {
-    # ~/.config/systemd/user/default.target.wants/telegram.service -> /etc/systemd/user/telegram.service
-    serviceConfig.Restart="always";
-    path = [ "/run/current-system/sw" ];
-    script = ''sleep 3; exec telegram-desktop -startintray'';
   };
 
   hardware = {
