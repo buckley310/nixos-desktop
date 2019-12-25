@@ -1,7 +1,5 @@
 set $mod Mod4
 
-bindsym $mod+l exec sh -c "xset dpms 10 && i3lock -n -c 000030 && sleep 1 && xset dpms 300"
-
 bindsym $mod+t exec thunar
 bindsym $mod+b exec firefox
 
@@ -13,6 +11,10 @@ bindsym $mod+Shift+minus resize shrink height 100px
 bindsym $mod+End [workspace="__focused__"] move workspace "tmp"; [workspace="tmp"] move workspace current
 bindsym $mod+Home resize set width 50ppt
 
+bindsym $mod+Shift+0 move scratchpad
+bindsym $mod+0 scratchpad show
+
+bindsym $mod+l exec sh -c "xset dpms 10 && i3lock -n -c 000030 && sleep 1 && xset dpms 300"
 exec --no-startup-id sh -c "sleep 1 && xset dpms 300"
 
 #exec --no-startup-id nm-applet
