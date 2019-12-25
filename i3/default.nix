@@ -9,6 +9,7 @@
   services.xserver = {
     enable = true;
     libinput.enable = true;
+    libinput.accelSpeed = "0.25";
     windowManager.i3.enable = true;
     desktopManager.xterm.enable = false;
   };

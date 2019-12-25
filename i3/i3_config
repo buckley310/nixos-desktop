@@ -14,7 +14,6 @@ bindsym $mod+End [workspace="__focused__"] move workspace "tmp"; [workspace="tmp
 bindsym $mod+Home resize set width 50ppt
 
 exec --no-startup-id sh -c "sleep 1 && xset dpms 300"
-exec --no-startup-id sh -c "sleep 1 && xinput set-prop 'Logitech G Pro Gaming Mouse' 'libinput Accel Speed' 0.25"
 
 #exec --no-startup-id nm-applet
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
