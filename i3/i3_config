@@ -8,7 +8,6 @@ bindsym $mod+minus resize shrink width 100px
 bindsym $mod+Shift+equal resize grow height 100px
 bindsym $mod+Shift+minus resize shrink height 100px
 
-bindsym $mod+End [workspace="__focused__"] move workspace "tmp"; [workspace="tmp"] move workspace current
 bindsym $mod+Home resize set width 50ppt
 
 bindsym $mod+Shift+0 move scratchpad
