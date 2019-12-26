@@ -11,8 +11,15 @@
   services.xserver = {
     enable = true;
     libinput.enable = true;
-    libinput.accelSpeed = "0.25";
     windowManager.i3.enable = true;
     desktopManager.xterm.enable = false;
+    config = ''
+      Section "InputClass"
+        Identifier "MouseSpeed"
+        MatchDriver "libinput"
+        MatchIsTouchpad "off"
+        Option "AccelSpeed" "0.25"
+      EndSection
+    '';
   };
 }
