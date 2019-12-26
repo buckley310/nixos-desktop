@@ -15,6 +15,7 @@ bindsym $mod+Shift+0 move scratchpad
 bindsym $mod+0 scratchpad show
 
 bindsym $mod+l exec sh -c "xset dpms 10 && i3lock -n -c 000030 && sleep 1 && xset dpms 0"
+exec --no-startup-id xset dpms 0
 
 #exec --no-startup-id nm-applet
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master -q 5%+
