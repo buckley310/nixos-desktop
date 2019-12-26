@@ -17,7 +17,7 @@
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 python2
       # Apps
-      brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
+      firefox brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
@@ -26,7 +26,6 @@
       qemu_kvm virtmanager kubectl doctl
       # Other
       yaru-theme
-      (if builtins.pathExists "/etc/nixos/using_wayland" then firefox-wayland else firefox)
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
       (vim_configurable.customize {
