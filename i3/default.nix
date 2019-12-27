@@ -5,7 +5,7 @@
   services.gvfs.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [
-    gnome3.networkmanagerapplet gnome3.file-roller
+    gnome3.networkmanagerapplet gnome3.file-roller caffeine-ng
     mate.mate-terminal xfce.thunar i3status xfce.thunar-archive-plugin
   ];
   services.xserver = {
