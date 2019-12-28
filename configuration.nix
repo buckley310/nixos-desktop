@@ -11,7 +11,6 @@
 
   environment = {
     variables.NIXPKGS_ALLOW_UNFREE = "1";
-    #gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
     systemPackages = with pkgs; [
       # CLI tools
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
@@ -67,20 +66,6 @@
       publish.enable = true;
       publish.addresses = true;
     };
-    udev.extraRules = ''
-      KERNEL=="uinput", MODE="0666", OPTIONS+="static_node=uinput"
-
-      # 1st gen ds4
-      #KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="05c4", MODE="0666"
-      #KERNEL=="hidraw*", SUBSYSTEM=="hidraw", KERNELS=="0005:054C:05C4.*", MODE="0666"
-
-      # 2nd gen ds4
-      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="09cc", MODE="0666"
-      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", KERNELS=="0005:054C:09CC.*", MODE="0666"
-
-      # smart card reader
-      ATTRS{idVendor}=="04e6", ATTRS{idProduct}=="5116", MODE="0666"
-    '';
   };
 
   zramSwap = {
