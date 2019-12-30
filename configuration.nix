@@ -16,7 +16,7 @@
       pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 python2
       # Apps
-      firefox brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
+      firefox brave vscode steam steam-run gimp pavucontrol mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
