@@ -3,7 +3,7 @@
   imports = [
     ../hardware-configuration.nix
     ../local.nix
-    ./i3
+    ./gnome
   ];
   time.timeZone = "US/Eastern";
   sound.enable = true;
