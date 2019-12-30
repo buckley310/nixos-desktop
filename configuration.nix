@@ -5,18 +5,19 @@
     ../local.nix
     ./gnome
   ];
+
   time.timeZone = "US/Eastern";
   sound.enable = true;
-  networking.networkmanager.enable = true;
+  fonts.fonts = [ pkgs.ubuntu_font_family ];
 
   environment = {
     variables.NIXPKGS_ALLOW_UNFREE = "1";
     systemPackages = with pkgs; [
       # CLI tools
-      pwgen darkhttpd pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
-      python3 python2
+      pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
+      python3 steam-run
       # Apps
-      firefox brave vscode steam steam-run gimp pavucontrol mpv libreoffice tdesktop retroarch
+      firefox brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
@@ -33,8 +34,6 @@
       })
     ];
   };
-
-  fonts.fonts = [ pkgs.ubuntu_font_family ];
 
   programs = {
     bash.vteIntegration = true;

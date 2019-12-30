@@ -4,6 +4,7 @@
   services.blueman.enable = true;
   services.gvfs.enable = true;
   programs.dconf.enable = true;
+  networking.networkmanager.enable = true;
   environment.systemPackages = with pkgs; [
     gnome3.networkmanagerapplet gnome3.file-roller gnome3.adwaita-icon-theme
     mate.mate-terminal xfce.thunar i3status xfce.thunar-archive-plugin caffeine-ng
