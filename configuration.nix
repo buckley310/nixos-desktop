@@ -21,7 +21,7 @@
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
-      wfuzz gobuster
+      wfuzz gobuster pwndbg
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
       # Other
