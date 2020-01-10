@@ -4,6 +4,7 @@
     ../hardware-configuration.nix
     ../local.nix
     ./gnome
+    ./podman
   ];
 
   time.timeZone = "US/Eastern";
@@ -51,11 +52,6 @@
       enableNestopia = true;
       enableHiganSFC = true;
     };
-  };
-
-  virtualisation = {
-    docker.enable = true;
-    docker.enableOnBoot = false;
   };
 
   services = {
