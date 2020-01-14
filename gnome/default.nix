@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment = {
-    gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
+    gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre ];
     systemPackages = with pkgs; [
       gnome3.gnome-tweaks gnomeExtensions.dash-to-panel
       (writeScriptBin "red" ''

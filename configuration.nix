@@ -18,7 +18,7 @@
       pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 steam-run
       # Apps
-      firefox brave vscode steam gimp pavucontrol mpv libreoffice tdesktop retroarch
+      firefox brave vscode gimp pavucontrol mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
@@ -29,6 +29,8 @@
       yaru-theme
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
+      (writeScriptBin "install-flathub"
+        "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
       (vim_configurable.customize {
         name="vim";
         vimrcConfig.customRC="set nowrap ruler scrolloff=9 backspace=start,indent";
@@ -55,6 +57,7 @@
   };
 
   services = {
+    flatpak.enable = true;
     avahi = {
       enable = true;
       nssmdns = true;
