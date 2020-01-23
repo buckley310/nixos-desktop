@@ -29,6 +29,7 @@
       yaru-theme
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
+      (writeScriptBin "nix-roots" "nix-store --gc --print-roots | grep -v ^/proc/")
       (writeScriptBin "install-flathub"
         "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
       (vim_configurable.customize {
