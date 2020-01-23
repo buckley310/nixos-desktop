@@ -34,7 +34,11 @@
         "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
       (vim_configurable.customize {
         name="vim";
-        vimrcConfig.customRC="set nowrap ruler scrolloff=9 backspace=start,indent";
+        vimrcConfig.customRC=''
+          syntax enable
+          filetype plugin indent on
+          set nowrap ruler scrolloff=9 backspace=start,indent
+        '';
       })
     ];
   };
