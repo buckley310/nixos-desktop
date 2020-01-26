@@ -15,6 +15,12 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/LaunchTerminal/ command 'gnome-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/LaunchTerminal/ name 'Launch Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/LaunchTerminal/ binding '<Super>Return'
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/LaunchTerminal/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>b']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys logout '[]'
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Alt>F11']"
 gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Super>w']"
