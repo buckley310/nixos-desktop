@@ -8,7 +8,6 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 
 gsettings set org.gnome.desktop.screensaver lock-delay 30
 gsettings set org.gnome.desktop.interface show-battery-percentage true
-gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
