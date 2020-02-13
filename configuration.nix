@@ -18,7 +18,7 @@
       pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 steam-run hugo
       # Apps
-      firefox brave vscode gimp pavucontrol mpv libreoffice tdesktop retroarch
+      firefox brave vscode gimp mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
