@@ -18,7 +18,7 @@
       pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
       python3 steam-run hugo
       # Apps
-      firefox brave vscode gimp mpv libreoffice tdesktop retroarch
+      firefox brave gimp mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
@@ -39,6 +39,13 @@
           filetype plugin indent on
           set nowrap ruler scrolloff=9 backspace=start,indent
         '';
+      })
+      (vscode-with-extensions.override {
+        vscodeExtensions = with pkgs.vscode-extensions; [
+          bbenoist.Nix
+          ms-python.python
+          ms-vscode.cpptools
+        ];
       })
     ];
   };
