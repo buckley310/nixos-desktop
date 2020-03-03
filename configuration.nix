@@ -45,6 +45,7 @@
           bbenoist.Nix
           ms-python.python
           ms-vscode.cpptools
+          ms-azuretools.vscode-docker
         ];
       })
     ];
