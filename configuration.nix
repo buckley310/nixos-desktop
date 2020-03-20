@@ -114,6 +114,4 @@
       uid = 600;
     };
   };
-
-  system.stateVersion = "20.03";
 }
