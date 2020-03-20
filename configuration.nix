@@ -90,6 +90,8 @@
 
   boot = {
     loader.timeout = 1;
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
     cleanTmpDir = true;
     zfs.forceImportAll = false;
     zfs.forceImportRoot = false;
