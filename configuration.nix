@@ -20,7 +20,7 @@
       firefox brave gimp mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
       # Security tools
-      exiftool dnsutils burpsuite nmap masscan binutils remmina wireshark openvpn socat ghidra-bin
+      exiftool dnsutils burpsuite nmap masscan binutils remmina openvpn socat ghidra-bin
       wfuzz gobuster pwndbg
       # Virtualisation
       qemu_kvm virtmanager kubectl doctl
@@ -51,6 +51,8 @@
   };
 
   programs = {
+    wireshark.enable = true;
+    wireshark.package = pkgs.wireshark;
     bash.vteIntegration = true;
     bash.interactiveShellInit = ''
       stty -ixon
@@ -108,7 +110,7 @@
     sean = {
       isNormalUser = true;
       uid = 1000;
-      extraGroups = [ "wheel" "audio" "video" "networkmanager" "dialout" "input" ];
+      extraGroups = [ "wheel" "audio" "video" "networkmanager" "dialout" "input" "wireshark" ];
     };
     test = {
       isNormalUser = true;
