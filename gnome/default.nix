@@ -3,7 +3,7 @@
   environment = {
     gnome3.excludePackages = with pkgs.gnome3; [ epiphany vinagre gnome-software ];
     systemPackages = with pkgs; [
-      gnome3.gnome-tweaks gnomeExtensions.dash-to-panel
+      gnome3.gnome-tweaks gnome3.gnome-boxes gnomeExtensions.dash-to-panel
       (writeScriptBin "red" ''
         x="$(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled)"
         [ "$x" = "true" ] && x=false || x=true
