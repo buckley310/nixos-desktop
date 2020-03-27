@@ -3,11 +3,13 @@ set -x
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'   ;sleep 1
 gsettings set org.gnome.desktop.interface icon-theme 'Yaru'       ;sleep 1
+gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
 gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'full'
 
 gsettings set org.gnome.desktop.screensaver lock-delay 30
 gsettings set org.gnome.desktop.interface show-battery-percentage true
+gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
