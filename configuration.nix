@@ -25,10 +25,15 @@
       # Other
       yaru-theme
       (callPackage ./binary-ninja-personal {})
-      (writeScriptBin "zfsram" "grep ^size /proc/spl/kstat/zfs/arcstats")
       (writeScriptBin "nix-roots" "nix-store --gc --print-roots | grep -v ^/proc/")
       (writeScriptBin "install-flathub"
         "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
+      (writeScriptBin "zfsram" ''
+        #!${pkgs.python3}/bin/python
+        for ln in open('/proc/spl/kstat/zfs/arcstats').readlines():
+          if ln.startswith('size '):
+            print(str(int(ln.split(' ')[-1])/(1024*1024*1024))[:5],'GB')
+      '')
       (vim_configurable.customize {
         name="vim";
         vimrcConfig.customRC=''
