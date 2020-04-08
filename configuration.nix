@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../hardware-configuration.nix
-    ../local.nix
+    ./hardware-configuration.nix
+    ./local
     ./gnome
   ];
 
