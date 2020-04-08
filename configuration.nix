@@ -23,7 +23,7 @@
       exiftool dnsutils burpsuite nmap masscan binutils remmina openvpn socat ghidra-bin
       wfuzz gobuster pwndbg
       # Virtualisation
-      qemu_kvm virtmanager kubectl doctl
+      qemu_kvm kubectl
       # Other
       yaru-theme
       (callPackage ./binary-ninja-personal {})
