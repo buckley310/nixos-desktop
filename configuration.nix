@@ -7,8 +7,6 @@
   ];
 
   time.timeZone = "US/Eastern";
-  sound.enable = true;
-  fonts.fonts = [ pkgs.ubuntu_font_family ];
 
   environment = {
     variables.NIXPKGS_ALLOW_UNFREE = "1";
