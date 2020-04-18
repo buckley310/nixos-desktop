@@ -16,6 +16,9 @@ stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p "$out/share/gnome-shell/extensions"
     cp -r "$src" "$out/share/gnome-shell/extensions/bottompanel@tmoer93"
+
+    chmod +w "$out/share/gnome-shell/extensions/bottompanel@tmoer93"
+    sed -i 's/.*_rightPanelBarrier.*/if(Main.layoutManager._rightPanelBarrier)&/' "$out/share/gnome-shell/extensions/bottompanel@tmoer93/extension.js"
   '';
 
   meta = with stdenv.lib; {
