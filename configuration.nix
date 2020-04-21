@@ -23,7 +23,6 @@
       # Virtualisation
       qemu_kvm kubectl
       # Other
-      yaru-theme
       (callPackage ./binary-ninja-personal {})
       (writeScriptBin "nix-roots" "nix-store --gc --print-roots | grep -v ^/proc/")
       (writeScriptBin "install-flathub"
