@@ -12,7 +12,6 @@ gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys logout '[]'
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Primary><Shift><Alt>f']"
-gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Super>w']"
 gsettings set org.gnome.desktop.wm.keybindings raise-or-lower "['<Super>d']"
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.375
