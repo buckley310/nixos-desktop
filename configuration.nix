@@ -12,7 +12,7 @@
     variables.NIXPKGS_ALLOW_UNFREE = "1";
     systemPackages = with pkgs; [
       # CLI tools
-      pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg p7zip gcc
+      pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg gcc
       python3 steam-run hugo
       # Apps
       firefox brave gimp mpv libreoffice tdesktop retroarch
