@@ -24,6 +24,7 @@
       qemu_kvm kubectl
       # Other
       (callPackage ./binary-ninja-personal {})
+      (callPackage ./gef {})
       (writeScriptBin "nix-roots" "nix-store --gc --print-roots | grep -v ^/proc/")
       (writeScriptBin "zfsram" ''
         #!${pkgs.python3}/bin/python
