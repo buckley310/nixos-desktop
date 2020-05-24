@@ -2,7 +2,7 @@
   stdenv, autoPatchelfHook, requireFile, libxkbcommon, makeWrapper, unzip, zlib, glib,
   fontconfig, freetype, dbus, python37, libglvnd, libXext, libX11, libXrender, libXi,
   libSM, libICE, xkeyboardconfig, nss, libXcomposite, libXcursor, libXdamage, libXtst,
-  alsaLib
+  alsaLib, libXrandr, krb5
 }:
 stdenv.mkDerivation rec {
     name = "binary-ninja-personal";
@@ -10,13 +10,13 @@ stdenv.mkDerivation rec {
     src = requireFile {
       name = "BinaryNinja-personal.zip";
       url = "file:///var/BinaryNinja-personal.zip";
-      sha256 = "59678b1c7c3087be518a8d30fc01264cc53beb9ab9c9a58ce4d8f5939123074c";
+      sha256 = "74c5418cbb86735b09535638ca1acf0c7937fe979d4ab8ef13e21e5ef26e7500";
     };
 
     nativeBuildInputs = [
       autoPatchelfHook libxkbcommon stdenv.cc.cc.lib zlib glib fontconfig freetype nss
       dbus python37 libglvnd libXext libX11 libXrender libXi libSM libICE unzip makeWrapper
-      libXcomposite libXcursor libXdamage libXtst alsaLib
+      libXcomposite libXcursor libXdamage libXtst alsaLib libXrandr krb5
     ];
 
     dontStrip = true;
