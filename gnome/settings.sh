@@ -9,6 +9,11 @@ gsettings set org.gnome.desktop.screensaver lock-delay 30
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+
 gsettings set org.gnome.settings-daemon.plugins.media-keys logout '[]'
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Primary><Shift><Alt>f']"
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
