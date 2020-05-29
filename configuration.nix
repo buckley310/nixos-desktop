@@ -13,7 +13,7 @@
     systemPackages = with pkgs; [
       # CLI tools
       pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg gcc
-      python3 steam-run hugo
+      python3 steam steam-run hugo
       # Apps
       firefox brave gimp mpv libreoffice tdesktop retroarch
       gnome3.dconf-editor
