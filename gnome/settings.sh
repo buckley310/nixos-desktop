@@ -2,6 +2,7 @@
 set -x
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark';sleep 1
+gsettings set org.gnome.desktop.interface icon-theme 'Numix';sleep 1
 gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'full'
 
