@@ -41,6 +41,7 @@
         '';
       })
       (vscode-with-extensions.override {
+        vscode = vscodium;
         vscodeExtensions = with pkgs.vscode-extensions; [
           bbenoist.Nix
           ms-python.python
