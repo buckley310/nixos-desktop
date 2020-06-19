@@ -5,7 +5,7 @@
     systemPackages = with pkgs; [
       numix-icon-theme
       gnome3.gnome-tweaks gnome3.gnome-boxes gnomeExtensions.sound-output-device-chooser
-      gnomeExtensions.dash-to-panel
+      gnomeExtensions.dash-to-panel gnomeExtensions.drop-down-terminal
       (callPackage ./bottom-panel.nix {})
       (writeScriptBin "red" ''
         x="$(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled)"
