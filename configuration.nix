@@ -60,6 +60,7 @@
       stty -ixon
       echo $XDG_SESSION_TYPE
       alias p=python3
+      alias buildsys='nix build -f "<nixpkgs/nixos>" --no-link system'
     '';
   };
 
