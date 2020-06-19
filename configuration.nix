@@ -61,6 +61,7 @@
       echo $XDG_SESSION_TYPE
       alias p=python3
       alias buildsys='nix build -f "<nixpkgs/nixos>" --no-link system'
+      alias channel='curl https://channels.nix.gsc.io/nixos-unstable/latest-v2'
     '';
   };
 
