@@ -18,6 +18,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift
 gsettings set org.gnome.settings-daemon.plugins.media-keys logout '[]'
 gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Primary><Shift><Alt>f']"
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.375
 
 gsettings set org.gnome.desktop.media-handling automount false
