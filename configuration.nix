@@ -52,6 +52,8 @@
     ];
   };
 
+  fonts.fonts = [ pkgs.powerline-fonts ];
+
   programs = {
     wireshark.enable = true;
     wireshark.package = pkgs.wireshark;
@@ -62,6 +64,15 @@
       alias p=python3
       alias buildsys='nix build -f "<nixpkgs/nixos>" --no-link system'
       alias channel='curl https://channels.nix.gsc.io/nixos-unstable/latest-v2'
+
+      function _update_ps1() {
+        PS1="\n$(${pkgs.powerline-go}/bin/powerline-go \
+                    -colorize-hostname \
+                    -cwd-mode=dironly \
+                    -modules=user,host,cwd,nix-shell,git,jobs \
+        )$ "
+      }
+      PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
     '';
   };
 
