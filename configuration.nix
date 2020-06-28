@@ -69,6 +69,7 @@
         PS1="\n$(${pkgs.powerline-go}/bin/powerline-go \
                     -colorize-hostname \
                     -cwd-mode=dironly \
+                    -git-assume-unchanged-size 0 \
                     -modules=user,host,cwd,nix-shell,git,jobs \
         )$ "
       }
