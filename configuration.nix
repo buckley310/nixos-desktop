@@ -6,8 +6,6 @@
     ./gnome
   ];
 
-  time.timeZone = "US/Eastern";
-
   environment = {
     variables.NIXPKGS_ALLOW_UNFREE = "1";
     systemPackages = with pkgs; [
@@ -52,8 +50,6 @@
     ];
   };
 
-  fonts.fonts = [ pkgs.powerline-fonts ];
-
   programs = {
     wireshark.enable = true;
     wireshark.package = pkgs.wireshark;
@@ -76,6 +72,10 @@
       PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
     '';
   };
+
+  time.timeZone = "US/Eastern";
+
+  fonts.fonts = [ pkgs.powerline-fonts ];
 
   systemd.tmpfiles.rules = [ "e /nix/var/log - - - 30d" ];
 
