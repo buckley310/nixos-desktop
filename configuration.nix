@@ -77,6 +77,8 @@
     '';
   };
 
+  systemd.tmpfiles.rules = [ "e /nix/var/log - - - 30d" ];
+
   nixpkgs.config = {
     allowUnfree = true;
     retroarch = {
