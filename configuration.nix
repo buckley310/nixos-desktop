@@ -58,7 +58,7 @@
       echo $XDG_SESSION_TYPE
       alias p=python3
       alias buildsys='nix build -f "<nixpkgs/nixos>" --no-link system'
-      alias channel='curl https://channels.nix.gsc.io/nixos-unstable/latest-v2'
+      alias channel='curl -L https://channels.nixos.org/nixos-unstable/git-revision'
 
       function _update_ps1() {
         PS1="\n$(${pkgs.powerline-go}/bin/powerline-go \
