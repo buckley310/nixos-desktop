@@ -11,9 +11,9 @@
     systemPackages = with pkgs; [
       # CLI tools
       pwgen pv tree tmux psmisc ncdu git file unzip glxinfo sqlite usbutils entr ffmpeg gcc
-      python3 steam-run hugo openssl wget lm_sensors htop
+      python3 steam-run hugo openssl wget lm_sensors htop zip
       # Apps
-      firefox chromium gimp mpv libreoffice tdesktop retroarch steam
+      firefox chromium gimp mpv libreoffice tdesktop retroarch steam pavucontrol
       gnome3.dconf-editor
       # Security tools
       exiftool dnsutils burpsuite nmap masscan binutils remmina openvpn socat ghidra-bin
